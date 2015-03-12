@@ -1,0 +1,208 @@
+/* me.nanof.us stylesheet - (c) Ville Talonpoika 2015 */
+
+@import 'mixins';
+@import 'social';
+@import 'lang';
+@import 'print';
+
+* {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  background: none;
+}
+
+body {
+  color: $text-color;
+  font-weight: 400;
+  font-size: 14pt;
+  font-family: $font-family;
+  text-align: left;
+}
+
+.background {
+  background: url("/images/backgs/backg1.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.transparentlayer {
+  background-color: $backg-color-1;
+  position: fixed;
+  opacity: 0.8;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+h1 {
+  font-weight: normal;
+  font-size: 20pt;
+  padding: 20pt;
+}
+
+h2 {
+  font-weight: 500;
+  font-size: 16pt;
+}
+
+h3 {
+  font-weight: 500;
+  font-size: 15pt;
+  padding-top: 8pt;
+  padding-bottom: 8pt;
+}
+
+p {
+  padding-top: 2pt;
+  padding-bottom: 10pt;
+}
+
+li {
+  margin-left: 16pt;
+}
+
+.date {
+  font-weight: 500;
+  font-size: 12pt;
+  padding-bottom: 8pt;
+  color: $caption-color;
+}
+
+hr {
+  height: 1pt;
+  border-bottom: 2pt solid $border-color; 
+}
+
+header {
+  top: 0;
+  width: 100%;
+  height: 60px;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 1.2em;
+  font-size: 0.8em;
+  background-attachment: scroll;
+  padding-top: 8pt;
+  padding-bottom: 12pt;
+  text-align: center;
+  background-color: $footer-color;
+  opacity: 0.2;
+  @include transition(opacity 0.3s ease-out);
+  &:hover {
+    opacity: 1;
+  }
+}
+
+main {
+  margin-top: 2cm;
+  margin-bottom: 2cm;
+  @include transition(0.3s);
+}
+
+section {
+  background: $section-color;
+  border-radius: 3pt;
+  margin: 16pt;
+  padding: 0pt;
+  min-height: 16cm;
+  box-shadow: 0 10pt 20pt rgba(0, 0, 0, 0.19), 0 6pt 6pt rgba(0, 0, 0, 0.23);
+}
+
+img {
+  max-width: 100%
+}
+
+@media screen and (min-width: 18cm) {
+  main {
+    float: right;
+    width: 18cm;
+  }
+}
+
+@media screen and (max-width: 18cm) {
+  main {
+    float: none;
+    width: 100%;
+  }
+}
+
+a {
+  &:link, &:visited {
+    color: $link-1;
+    text-decoration: none;
+  }
+  &:hover, &:active {
+    color: $link-hover-1;
+    text-decoration: none;
+  }
+}
+
+.floatpanel {
+  width: 50%;
+  float: left;
+  margin-top: 10pt;
+  margin-bottom: 10pt;
+}
+
+.wrapper {
+  overflow: hidden;
+  transition: height 200ms;
+  box-shadow: inset 0 3pt 6pt rgba(0, 0, 0, 0.16);
+}
+
+.content {
+  margin: 20pt 20pt;
+}
+
+.button {
+  border: 1pt;
+  border-color: $border-color;
+  border-top-style: solid;
+  border-right-style: none;
+  border-bottom-style: solid;
+  border-left-style: none;
+  border-radius: 1pt;
+  width: 100%;
+  padding-top: 10pt;
+  padding-bottom: 10pt;
+  cursor: pointer;
+}
+
+.noselect {
+  @include user-select(none);
+}
+
+.triwrapper {
+  float: left;
+  padding-left: 10pt;
+  padding-right: 10pt;
+}
+
+.tri {
+  color: $border-color;
+  width: 24px;
+  height: 24px;
+  background-image: url("/images/icons/triangle.png");
+  background-size: 24px 24px;
+  background-repeat: no-repeat;
+  @include transition(0.3s);
+}
+
+.rotationToggle {
+  @include rotate(90deg);
+}

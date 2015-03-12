@@ -1,0 +1,38 @@
+
+/*Language buttons */
+
+body {
+  &.fi [lang=en], &.en [lang=fi] {
+    display: none;
+  }
+}
+
+.flags {
+  float: right;
+  width: 120px;
+  height: 100%;
+}
+
+.flag {
+  width: 40px;
+  height: 24px;
+  margin: 6px;
+  float: right;
+  opacity: 0.4;
+  @include transition(opacity 0.3s ease-out);
+  &:hover {
+    opacity: 1;
+  }
+}
+
+#fi {
+  background-image: url("/images/icons/finnishflag.png");
+  background-size: 100% 100%;
+  background-color: #FFFFFF;
+}
+
+#en {
+  background-image: url("/images/icons/ukflag.png");
+  background-size: 100% 100%;
+  background-color: #FFFFFF;
+}

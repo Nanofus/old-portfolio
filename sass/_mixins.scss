@@ -1,0 +1,52 @@
+/* Colors & other variables */
+
+$font-family:	"Roboto", sans-serif;
+
+$text-color: #212121; /*Black 87%*/
+$caption-color: #6E6E6E; /*Black 54%*/
+$border-color: #eee; /*Black 7%*/
+
+$backg-color-1: #4CAF50;
+$link-1: #4CAF50;
+$link-hover-1: #66BB6A;
+
+$section-color: #FFFFFF;
+$footer-color: #FAFAFA;
+
+/*Social buttons*/
+
+$color-fb: #3B5998;
+$color-github: #4183C4;
+$color-twitter: #00ACED;
+$color-gplus: #D14836;
+$color-linkedin: #007FB1;
+$color-ludumdare: #FD6E36;
+$color-steam: #171A21;
+$color-reddit: #CEE3F8;
+
+/* Browser-specific */
+
+@mixin transition($parameters) {
+  -webkit-transition: $parameters;
+     -moz-transition: $parameters;
+      -ms-transition: $parameters;
+	   -o-transition: $parameters;
+          transition: $parameters;
+}
+
+@mixin user-select($parameters) {
+	-webkit-touch-callout: $parameters;
+	  -webkit-user-select: $parameters;
+	   -khtml-user-select: $parameters;
+	     -moz-user-select: $parameters;
+	      -ms-user-select: $parameters;
+			  user-select: $parameters;
+}
+
+@mixin rotate($parameters) {
+	-moz-transform: rotate($parameters);
+	  -o-transform: rotate($parameters);
+ -webkit-transform: rotate($parameters);
+	 -ms-transform: rotate($parameters);
+	     transform: rotate($parameters);
+}
