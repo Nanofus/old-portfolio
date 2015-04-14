@@ -4,6 +4,8 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
+		<meta name="theme-color" content="#4CAF50">
+		<!--<link rel="icon" sizes="192x192" href="nice-highres.png"> High res favicon -->
 		<title>Portfolio - Nanofus</title>
 		<link rel="shortcut icon" href="images/icons/favicon.ico" />
 		<link href='//fonts.googleapis.com/css?family=Roboto:400,700,100italic,300italic' rel='stylesheet' type='text/css'>
